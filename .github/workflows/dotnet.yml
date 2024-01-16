@@ -23,7 +23,7 @@ jobs:
         prop_path: 'Version'
     - run: echo ${{steps.version.outputs.prop}} 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore 'Flow.Launcher.Plugin.Kaomoji/Flow.Launcher.Plugin.Kaomoji.csproj'
     - name: Build
       run: |
         dotnet publish 'Flow.Launcher.Plugin.Kaomoji/Flow.Launcher.Plugin.Kaomoji.csproj' --framework net8.0-windows  -c Release -o "Kaomoji"

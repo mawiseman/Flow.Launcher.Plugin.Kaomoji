@@ -14,7 +14,7 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 7.0.x
     - name: Get Version
       id: version
       uses: notiz-dev/github-action-json-property@release
@@ -26,7 +26,7 @@ jobs:
       run: dotnet restore 'Flow.Launcher.Plugin.Kaomoji/Flow.Launcher.Plugin.Kaomoji.csproj'
     - name: Build
       run: |
-        dotnet publish 'Flow.Launcher.Plugin.Kaomoji/Flow.Launcher.Plugin.Kaomoji.csproj' --framework net8.0-windows  -c Release -o "Kaomoji"
+        dotnet publish 'Flow.Launcher.Plugin.Kaomoji/Flow.Launcher.Plugin.Kaomoji.csproj' --framework net7.0-windows  -c Release -o "Kaomoji"
         7z a -tzip "Flow.Launcher.Plugin.Kaomoji.zip" "Kaomoji/*"
         rm -r "Kaomoji"
     - name: Publish

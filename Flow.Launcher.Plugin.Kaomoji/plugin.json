@@ -1,0 +1,12 @@
+{
+    "ID": "B348C4F7608746DAA8B519F223CFC8FB",
+    "ActionKeyword": "kao",
+    "Name": "Kaomoji",
+    "Description": "A Kaomoji extension for Flow-Launcher",
+    "Author": "mawiseman",
+    "Version": "1.0.1",
+    "Language": "csharp",
+    "Website": "https://github.com/mawiseman/Flow.Launcher.Plugin.Kaomoji",
+    "IcoPath": "Assets\\icon.png",
+    "ExecuteFileName": "Flow.Launcher.Plugin.Kaomoji.dll"
+}

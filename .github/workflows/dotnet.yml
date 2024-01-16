@@ -16,13 +16,12 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: get version
-        id: version
-        uses: notiz-dev/github-action-json-property@release
-        with: 
-          path: 'Flow.Launcher.Plugin.Kaomoji/plugin.json'
-          prop_path: 'Version'
+      id: version
+      uses: notiz-dev/github-action-json-property@release
+      with: 
+        path: 'Flow.Launcher.Plugin.Kaomoji/plugin.json'
+        prop_path: 'Version'
     - run: echo ${{steps.version.outputs.prop}} 
-
     - name: Build
       run: |
         dotnet publish 'Flow.Launcher.Plugin.Kaomoji/Flow.Launcher.Plugin.Kaomoji.csproj' --framework net8.0-windows  -c Release -o "Kaomoji"

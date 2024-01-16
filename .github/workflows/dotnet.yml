@@ -24,7 +24,7 @@ jobs:
     - run: echo ${{steps.version.outputs.prop}} 
     - name: Build
       run: |
-        dotnet publish 'Flow.Launcher.Plugin.Kaomoji/Flow.Launcher.Plugin.Kaomoji.csproj' --framework net8.0-windows  -c Release -o "Kaomoji"
+        dotnet publish 'Flow.Launcher.Plugin.Kaomoji/Flow.Launcher.Plugin.Kaomoji.csproj' --framework net7.0-windows  -c Release -o "Kaomoji"
         7z a -tzip "Flow.Launcher.Plugin.Kaomoji.zip" "Kaomoji/*"
         rm -r "Kaomoji"
     - name: Publish
